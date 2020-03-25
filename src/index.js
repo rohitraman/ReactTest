@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Cards from './modules/Cards'
 import LandingPage from './modules/LandingPage'
 import * as serviceWorker from './serviceWorker';
 

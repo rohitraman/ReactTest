@@ -1,0 +1,17 @@
+body{
+    background: radial-gradient(#e5e5e5, #ffff, #e5e5e5);
+    width: 95%;
+}
+
+.card1{
+    width: 14rem;
+    height:12rem;
+    border-color: black;
+}
+
+.card1:hover{
+    box-shadow: 5px 10px 20px 1px rgba(0,0,0,0.253);
+}
+.card1:body{
+    padding: 1rem  !important;
+}

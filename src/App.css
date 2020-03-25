@@ -37,22 +37,22 @@
   }
 }
 .leaderBoard {
-  text-align: center;
+  align-self: start;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   margin-top: 12%;
-  top: 10%;
+  top: 20%;
   position: absolute;
-  width: 100%;
-  /* margin-left: 5%; */
+  width: 98%;
+  max-width: 100%;
 }
 
 .leaderBoard td, .leaderBoard th {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 6px;
 }
 .leaderBoard th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
   
   color: black;

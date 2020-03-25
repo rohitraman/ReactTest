@@ -3,7 +3,6 @@ import { render } from '@testing-library/react';
 import App from './App';
 import LandingPage from './modules/LandingPage'
 import Adapter from "enzyme-adapter-react-16";
-import Leaderboard from './modules/Leaderboard'
 import { shallow, configure, mount } from "enzyme";
 
 configure({ adapter: new Adapter() });
@@ -22,11 +21,19 @@ test("check if mounting is happening(LandingPage)", () => {
 
 test("renders header", () => {
   const { getByText } = render(<LandingPage />);
-  const linkElement = getByText(/Welcome/i);
-  expect(linkElement).toBeInTheDocument();
+  const textElement = getByText(/Welcome/i);
+  expect(textElement).toBeInTheDocument();
 });
 
-test("check mounting of Leaderboard",()=>{
-  const mounted=mount(<Leaderboard/>)
-  expect(mounted.exists()).toEqual(true)
+
+test("check if live leaderboard text is present",()=>{
+  const {getByText}=render(<LandingPage/>);
+  const llText = getByText(/Live/i);
+  expect(llText).toBeInTheDocument()
+})
+
+
+test("check if leaderboard is present",()=>{
+  const wrapper = shallow(<LandingPage />);
+  expect(wrapper.find('Leaderboard').exists()).toEqual(true)
 })
