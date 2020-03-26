@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CardCourses from './CardUIAssignedCourses';
-import Sub from './dataAssignedCourses.json';
+import Sub from './dataAssignedCourses';
 class Loop extends Component {
     render() { 
         console.log(Sub)

@@ -41,9 +41,7 @@ class Course extends Component {
           </div>
           <div className="row">
             <div className="col-sm-12">
-              <p>
                 <h6>Course name : {this.props.name}</h6>
-              </p>
             </div>
           </div>
           <div className="row">

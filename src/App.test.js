@@ -35,5 +35,23 @@ test("check if live leaderboard text is present",()=>{
 
 test("check if leaderboard is present",()=>{
   const wrapper = shallow(<LandingPage />);
-  expect(wrapper.find('Leaderboard').exists()).toEqual(true)
+  wrapper.setProps({
+    dataList:[{
+      "email_id":"imeverything@gmail.com",
+      "name":"vivek",
+      "batch":"PE2020",
+      "rank":9,
+      "overall_score":50,
+      "individual_scores":
+      [
+         {
+          "contest1_score":50,
+          "contest2_score":50
+         }
+
+      ],
+      "udemy_completion_percentage":50
+  }]
+  })
+  expect(wrapper.find('Leaderboard')).toHaveLength(1)
 })

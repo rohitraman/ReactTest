@@ -3,6 +3,7 @@ import "./card-style-upcoming.css";
 
 const CardUI=props=>{
     return(
+        <div className="card1">
         <div className="card text-center">
             <div className="overflow">
                 <img src={props.imgsrc} alt="Acitivity" className="card-img-top"
@@ -15,7 +16,8 @@ const CardUI=props=>{
                 <h6 className="Time">Time : {props.cardstarttime}</h6>
                 <p className="description">{props.carddescription}</p>
             </div>
-        </div>    
+        </div>   
+        </div> 
     );
 }
 
